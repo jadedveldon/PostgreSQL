@@ -20,7 +20,7 @@ builder.Services.AddScoped<IPostgreSQLRepository, PostgreSQLRepository>();
 builder.Services.AddScoped<IPostgreSQLDataLayer, PostgreSQLDataLayer>();
 
 //Service to connect to db
-builder.Services.AddDbContext<TestContext>(options => options.UseNpgsql("Host=localhost;Database=test;Username=postgres;Password=password"));
+builder.Services.AddDbContext<TestContext>(options => options.UseNpgsql("Host=demo-sapan.postgres.database.azure.com;Database=postgres;Username=sapan@demo-sapan;Password=Sachit2000"));
 
 //automapper setup
 builder.Services.AddAutoMapper(typeof(Program));
@@ -28,11 +28,11 @@ builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 
