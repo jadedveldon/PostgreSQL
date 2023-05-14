@@ -8,5 +8,6 @@ namespace PostgreSQL.DataEntities.ViewModels;
 
 public class InformationViewModel
 {
+    // view models
     public string Name { get; set; } = null!;
 }
