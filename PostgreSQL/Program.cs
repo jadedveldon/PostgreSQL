@@ -45,6 +45,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPostgreSQLRepository, PostgreSQLRepository>();
 builder.Services.AddScoped<IPostgreSQLDataLayer, PostgreSQLDataLayer>();
 
+
 // Read the connection string from configuration
 //functionality: gets the connection string from appsettings.json
 //when removed: cant connect to db as there is no connection string
@@ -82,6 +83,7 @@ var app = builder.Build();
 //functionality:it is to launch and use swagger
 //when removed: swagger isnt launched but the api does work normally without it too
 //when position changed: has to be used before build only, and anywhere in the pipeline before run works 
+
     app.UseSwagger();
     app.UseSwaggerUI();
 //}
